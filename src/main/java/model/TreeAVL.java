@@ -2,9 +2,11 @@ package model;
 
 public class TreeAVL {
     private Node<Integer> root;
+    private int size;
 
     public void insert(int key) {
         root=insert(root, key);
+        size++;
     }
 
     public void delete(int key){
@@ -182,5 +184,9 @@ public class TreeAVL {
 
     public Node<Integer> getRoot(){
         return root;
+    }
+
+    public int size() {
+        return size;
     }
 }
